@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Гноман Мо та загублений малюк</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="forest-bg"></div>
+
+  <main class="book-container">
+    <header class="book-header">
+      <div class="title-block">
+        <span class="episode-badge" id="episodeBadge">Епізод 1</span>
+        <h1 id="bookTitle">Гноман Мо та загублений малюк</h1>
+      </div>
+
+      <div class="controls-top">
+        <select id="langSelect" aria-label="Вибір мови">
+          <option value="uk" selected>🇺🇦 Українська</option>
+          <option value="ru">🇷🇺 Русский</option>
+          <option value="cs">🇨🇿 Čeština (заготовка)</option>
+          <option value="en">🇬🇧 English (заготовка)</option>
+        </select>
+
+        <button id="speakBtn" class="btn btn-accent" type="button">
+          🔊 Читати вголос
+        </button>
+
+        <label class="auto-toggle" title="Автоматично перегортати сторінки після озвучення">
+          <input type="checkbox" id="autoPlayToggle" />
+          <span>Автогортання</span>
+        </label>
+      </div>
+    </header>
+
+    <section class="page-card" id="pageCard">
+      <div class="illustration-frame">
+        <img id="pageImage" src="" alt="Ілюстрація до казки" />
+        <div class="image-caption" id="imageCaption"></div>
+      </div>
+
+      <div class="story-content">
+        <div class="page-indicator" id="pageIndicator">Сторінка 1 з 7</div>
+        <div class="story-text" id="storyText"></div>
+      </div>
+    </section>
+
+    <footer class="book-footer">
+      <button id="prevBtn" class="btn btn-nav" type="button">← Назад</button>
+
+      <div class="progress-dots" id="progressDots"></div>
+
+      <button id="nextBtn" class="btn btn-nav" type="button">Далі →</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
